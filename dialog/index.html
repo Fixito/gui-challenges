@@ -6,5 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dialog | GUI Challenges</title>
   </head>
-  <body></body>
+  <body>
+    <!-- mini dialog -->
+    <dialog id="MiniDialog" modal-mode="mini">
+      <form method="dialog">
+        <article>
+          <p>Are you sure you want to remove this user?</p>
+        </article>
+        <footer>
+          <menu>
+            <button
+              autofocus
+              type="cancel"
+              onclick="this.closest('dialog').close('cancel')"
+            >
+              Cancel
+            </button>
+            <button type="submit" value="confirm">Confirm</button>
+          </menu>
+        </footer>
+      </form>
+    </dialog>
+
+    <button onclick="MiniDialog.showModal()">Open Dialog</button>
+  </body>
 </html>
