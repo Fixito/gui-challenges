@@ -5,29 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dialog | GUI Challenges</title>
+    <meta name="description" content="🤓" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="./app.js" defer></script>
   </head>
   <body>
-    <!-- mini dialog -->
-    <dialog id="MiniDialog" modal-mode="mini">
-      <form method="dialog">
-        <article>
-          <p>Are you sure you want to remove this user?</p>
-        </article>
-        <footer>
-          <menu>
-            <button
-              autofocus
-              type="cancel"
-              onclick="this.closest('dialog').close('cancel')"
-            >
-              Cancel
-            </button>
-            <button type="submit" value="confirm">Confirm</button>
-          </menu>
-        </footer>
-      </form>
-    </dialog>
+    <main>
+      <!-- mini dialog -->
+      <dialog id="MiniDialog" modal-mode="mini">
+        <form method="dialog">
+          <article>
+            <p>Are you sure you want to remove this user?</p>
+          </article>
+          <footer>
+            <menu>
+              <button
+                autofocus
+                type="button"
+                onclick="this.closest('dialog').close('cancel')"
+              >
+                Cancel
+              </button>
+              <button type="submit" value="confirm">Confirm</button>
+            </menu>
+          </footer>
+        </form>
+      </dialog>
 
-    <button onclick="MiniDialog.showModal()">Open Dialog</button>
+      <button onclick="MiniDialog.showModal()">Open Dialog</button>
+    </main>
   </body>
 </html>
